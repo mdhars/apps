@@ -1,0 +1,243 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#006699">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rowCount="11"
+        android:id="@+id/gridDimensionCalc"
+        android:columnCount="5"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/nmLength"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:width="100dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="X"
+            android:id="@+id/txtX1"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/nmBreadth"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:width="100dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="X"
+            android:id="@+id/txtX2"
+            android:layout_row="0"
+            android:layout_column="3" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/nmHeight"
+            android:layout_row="0"
+            android:layout_column="4"
+            android:width="100dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Length"
+            android:id="@+id/lblLength"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Breadth"
+            android:id="@+id/lblBreadth"
+            android:layout_row="1"
+            android:layout_column="2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Height"
+            android:id="@+id/lblHeight"
+            android:layout_row="1"
+            android:layout_column="4" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nmAdjust"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:width="70dp"
+            android:text="2"
+            android:hint=""/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate Board Size"
+            android:id="@+id/btnCalc"
+            android:layout_row="2"
+            android:layout_columnSpan="4"
+             android:layout_gravity="center_horizontal"
+            android:layout_column="1"
+            android:onClick="calculateBoardSize"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Adjust"
+            android:id="@+id/lblAdjust"
+            android:layout_row="3"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/txReelSize"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:width="100dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="X"
+            android:id="@+id/textX3"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:width="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/txBrdSize"
+            android:layout_row="5"
+            android:layout_column="2"
+            android:width="100dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:id="@+id/textX4"
+            android:layout_row="5"
+            android:layout_column="3"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inch"
+            android:id="@+id/chkInchCM"
+            android:layout_row="5"
+            android:layout_column="4"
+            android:checked="true"
+            android:onClick="calculateBoardSize"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="ReelSize"
+            android:id="@+id/lblReelSize"
+            android:layout_row="6"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="BoardSize"
+            android:id="@+id/lblBoardSize"
+            android:layout_row="6"
+            android:layout_column="2" />
+
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spGSM"
+            android:layout_row="7"
+            android:layout_column="0"
+            android:entries="@array/gsm_array"
+            android:spinnerMode="dropdown"/>
+
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spPly"
+            android:layout_row="7"
+            android:layout_column="2"
+            android:entries="@array/ply_array"
+            android:spinnerMode="dropdown"/>
+
+
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate gm/Board"
+            android:id="@+id/button"
+            android:layout_row="8"
+            android:layout_column="0"
+            android:layout_columnSpan="5"
+            android:layout_gravity="center_horizontal"
+            android:onClick="calcGramPerBoard"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:id="@+id/txBoardWt"
+            android:layout_row="9"
+            android:layout_column="2"
+            android:layout_columnSpan="2"/>
+
+
+    </GridLayout>
+</RelativeLayout>
